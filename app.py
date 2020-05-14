@@ -32,11 +32,12 @@ def add():
         'add.html'
     )
 
-@app.route('/store', methods=['POST'])
+@app.route('/store', methods=['POST', 'GET'])
 def store():
     nome = request.form['nome']
-    valor = request.form['preco']
-    produto.append([nome,valor])
+    val = request.form['val']
+    produto.append([nome, val])
+    
     return redirect('/')
 
 @app.route('/delete/<int:id>')

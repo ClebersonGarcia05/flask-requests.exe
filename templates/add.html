@@ -6,7 +6,7 @@
     <title>Adicionar Produto</title>
 </head>
 <body>
-    <form action="/store" method="POST">
+    <form action="/store" method="POST, GET" >
         <input
             type="text" 
             name="nome" 
@@ -14,8 +14,10 @@
             required
         >
         <input 
-            type="text" 
-            name="preco" 
+            type="number" 
+            name="val"
+            step="0.01"
+            min="0"
             placeholder="Valor do Produto"
             required
         >
